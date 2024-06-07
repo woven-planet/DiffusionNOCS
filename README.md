@@ -10,7 +10,14 @@ The paper and github pages are available:
 - **arXiv**: https://arxiv.org/abs/2402.12647
 - **Github Pages**: https://woven-planet.github.io/DiffusionNOCS/
 
-## How to install
+## Run on Google Colab
+You can try the inference of DiffusionNOCS by clicking the link below and following instructions in the colab noteboook.
+
+[![Explore DiffusionNOCS in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/woven-planet/DiffusionNOCS/blob/main/notebooks/diffusion_nocs_for_colab.ipynb)<br>
+
+## Run locally
+
+### How to install
 
 ```bash
 git clone https://github.com/woven-planet/DiffusionNOCS.git
@@ -25,9 +32,6 @@ ipython kernel install --user --name=venv
 ```
 
 If you'd like to use your specific version, please modify `requirements.txt` based on your preference.
-
-
-## Try example codes
 
 ### Try inference on jupyter notebook
 Run the following code:
