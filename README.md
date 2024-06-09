@@ -13,7 +13,7 @@ The paper and github pages are available:
 ## Run on Google Colab
 You can try the inference of DiffusionNOCS by clicking the link below and following instructions in the colab noteboook.
 
-[![Explore DiffusionNOCS in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/woven-planet/DiffusionNOCS/blob/main/notebooks/diffusion_nocs_for_colab.ipynb)<br>
+[![Explore DiffusionNOCS in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/woven-planet/DiffusionNOCS/blob/main/notebooks/diffusion_nocs_for_colab.ipynb)<br>
 
 ## Run locally
 
