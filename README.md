@@ -22,7 +22,7 @@ You can try the inference of DiffusionNOCS by clicking the link below and follow
 ```bash
 git clone https://github.com/woven-planet/DiffusionNOCS.git
 cd DiffusionNOCS
-./download.sh
+./download_weights.sh
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
@@ -45,6 +45,9 @@ Run the following code:
 ```bash
 python3 scripts/inference.py  --category-name "bottle"
 ```
+
+## Generalization Benchmark Dataset
+[How to create the dataset of Generalization Benchmark](README_benchmark.md)
 
 ## About This Project and Us
 
