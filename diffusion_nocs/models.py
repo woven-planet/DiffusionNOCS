@@ -129,13 +129,13 @@ class DinoFeatures:
         images: List[np.ndarray],
     ) -> Tuple[np.ndarray, np.ndarray]:
         assert len(set(image.shape for image in images)) == 1, "Not all images have same shape"
-        im_w, im_h = images[0].shape[0:2]
+        im_h, im_w = images[0].shape[0:2]
         assert (
             im_w % self.patch_size == 0 and im_h % self.patch_size == 0
         ), "Both width and height of the image must be divisible by 14"
 
         image_array = np.stack(images) / 255.0
-        input_tensor = torch.Tensor(np.transpose(image_array, [0, 3, 2, 1]))
+        input_tensor = torch.Tensor(np.transpose(image_array, [0, 3, 1, 2]))
         input_tensor = self._transform(input_tensor).to(self._device)
 
         with torch.no_grad():
@@ -149,9 +149,8 @@ class DinoFeatures:
             patch_tokens = patch_tokens.detach().numpy()
             class_tokens = class_tokens.detach().numpy()
             all_patches = patch_tokens.reshape(
-                [-1, im_w // self.patch_size, im_h // self.patch_size, self._feature_dim]
+                [-1, im_h // self.patch_size, im_w // self.patch_size, self._feature_dim]
             )
-        all_patches = np.transpose(all_patches, (0, 2, 1, 3))
         return all_patches, class_tokens
 
     def apply_pca(self, features: np.ndarray, masks: np.ndarray) -> np.ndarray:
