@@ -9,3 +9,4 @@ torch==2.0.1
 torchvision==0.15.2
 transformers==4.35.2
 diffusers==0.18.1
+numpy==1.26.4
